@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="IncreaseButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:text">@string/plus</item>
+        <item name="android:background">@drawable/btn_increase_drawable</item>
+    </style>
+
+    <style name="DecreaseButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:text">@string/minus</item>
+        <item name="android:background">@drawable/btn_decrease_drawable</item>
+    </style>
+</resources>

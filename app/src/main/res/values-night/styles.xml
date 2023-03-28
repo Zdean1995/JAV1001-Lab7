@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
     <style name="IncreaseButton" parent="Widget.AppCompat.Button">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:text">@string/plus</item>
-        <item name="android:background">@drawable/btn_increase_drawable</item>
+        <item name="android:background">@drawable/btn_increase_drawable_night</item>
         <item name="android:textSize">50sp</item>
     </style>
 
@@ -32,6 +31,6 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">vertical</item>
         <item name="android:layout_margin">5dp</item>
-        <item name="android:background">@drawable/player_section_shape</item>
+        <item name="android:background">@drawable/player_section_shape_night</item>
     </style>
 </resources>

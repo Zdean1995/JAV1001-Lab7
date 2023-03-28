@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
             toast.show()
             binding.txtPlayer1Score.text = resources.getString(R.string.life_default)
             binding.txtPlayer2Score.text = resources.getString(R.string.life_default)
+            binding.spnChangeAmount.setSelection(0)
         }
 
     }

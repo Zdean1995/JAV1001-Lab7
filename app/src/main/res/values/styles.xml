@@ -13,4 +13,13 @@
         <item name="android:text">@string/minus</item>
         <item name="android:background">@drawable/btn_decrease_drawable</item>
     </style>
+
+    <style name="LifeCount">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">80sp</item>
+    </style>
 </resources>

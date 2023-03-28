@@ -5,19 +5,21 @@ A00275392
 Life counter app for Magic the gathering
 Life in the game is basically a score right?
 -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
     tools:context=".MainActivity">
     <LinearLayout
+        android:id="@+id/lay_player_1"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:rotation="180">
+        android:rotation="180"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/lay_title"
+        app:layout_constraintEnd_toEndOf="parent">
 
 
         <!--player 1 section-->
@@ -47,18 +49,12 @@ Life in the game is basically a score right?
 
             <TextView
                 android:id="@+id/txt_player_1_score"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
                 android:text="@string/life_default"
-                android:textAlignment="center"
-                android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintEnd_toStartOf="@id/btn_player_1_decrease"
                 app:layout_constraintStart_toEndOf="@id/btn_player_1_increase"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/LifeCount" />
 
             <Button
                 android:id="@+id/btn_player_1_decrease"
@@ -71,54 +67,71 @@ Life in the game is basically a score right?
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
-    <!--title of the project.-->
-    <TextView
-        android:id="@+id/txt_game_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/mtg_life_counter"
-        android:textAlignment="center"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        android:layout_margin="8dp" />
-
-    <!--button to reset the life total back to 20-->
-    <Button
-        android:id="@+id/btn_reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_reset"
-        android:layout_margin="8dp"/>
-
-    <!--section for changing the life change amount.  Options are 1, 5, and 10.-->
     <LinearLayout
+        android:id="@+id/lay_title"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:orientation="horizontal"
-        android:layout_margin="8dp">
-
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <!--title of the project.-->
         <TextView
-            android:id="@+id/txt_life_change_amount"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:text="@string/life_change_amount"
-            android:textSize="25sp"
-            android:gravity="center"/>
+            android:id="@+id/txt_game_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/mtg_life_counter"
+            android:textAlignment="center"
+            android:textSize="48sp"
+            android:textStyle="bold" />
 
-        <Spinner
-            android:id="@+id/spn_change_amount"
+        <!--button to reset the life total back to 20-->
+
+
+        <!--section for changing the life change amount.  Options are 1, 5, and 10.-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_life_change_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/life_change_amount"
+                android:textSize="25sp" />
+
+            <Spinner
+                android:id="@+id/spn_change_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:entries="@array/score_array" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_reset"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:entries="@array/score_array" />
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/btn_reset" />
     </LinearLayout>
 
 
     <LinearLayout
+        android:id="@+id/lay_player_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lay_title"
+        app:layout_constraintEnd_toEndOf="parent">
     <!--Player 2 section-->
     <TextView
         android:id="@+id/txt_player_2"
@@ -144,27 +157,19 @@ Life in the game is basically a score right?
 
             <TextView
                 android:id="@+id/txt_player_2_score"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
                 android:text="@string/life_default"
-                android:textAlignment="center"
-                android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintEnd_toStartOf="@id/btn_player_2_decrease"
                 app:layout_constraintStart_toEndOf="@id/btn_player_2_increase"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/LifeCount" />
 
             <Button
                 android:id="@+id/btn_player_2_decrease"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:text="@string/minus"
+                style="@style/DecreaseButton"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

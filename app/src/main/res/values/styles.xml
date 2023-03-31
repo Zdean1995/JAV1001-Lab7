@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-
+    <!--Style for the increase life button.  I wanted both buttons and the life counter to look like one shape-->
     <style name="IncreaseButton" parent="Widget.AppCompat.Button">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">0dp</item>
@@ -10,6 +9,7 @@
         <item name="android:textSize">50sp</item>
     </style>
 
+    <!--I made way too many drawables-->
     <style name="DecreaseButton" parent="Widget.AppCompat.Button">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">0dp</item>
@@ -18,6 +18,8 @@
         <item name="android:textSize">50sp</item>
     </style>
 
+    <!--The style for the life count.  I wanted to have the border only on the top and bottom
+    but I couldn't figure out how.  I still think it looks fine with the border all around.-->
     <style name="LifeCount">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
@@ -25,8 +27,10 @@
         <item name="android:gravity">center</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">80sp</item>
+        <item name="android:background">@drawable/txt_life_count_shape</item>
     </style>
 
+    <!-- the style for the player section as a whole.-->
     <style name="player_section">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

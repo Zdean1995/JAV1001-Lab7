@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <!--The styles for if the app is set to night mode.  The darker colours are made brighter to highlight them better-->
     <style name="IncreaseButton" parent="Widget.AppCompat.Button">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">0dp</item>
@@ -13,7 +13,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:text">@string/minus</item>
-        <item name="android:background">@drawable/btn_decrease_drawable</item>
+        <item name="android:background">@drawable/btn_decrease_drawable_night</item>
         <item name="android:textSize">50sp</item>
     </style>
 
@@ -24,6 +24,7 @@
         <item name="android:gravity">center</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">80sp</item>
+        <item name="android:background">@drawable/txt_life_count_shape_night</item>
     </style>
 
     <style name="player_section">

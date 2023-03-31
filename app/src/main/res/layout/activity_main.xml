@@ -14,9 +14,7 @@ Life in the game is basically a score right?
 
     <LinearLayout
         android:id="@+id/lay_player_1"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:orientation="vertical"
+        style="@style/player_section"
         android:rotation="180"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/lay_title"
